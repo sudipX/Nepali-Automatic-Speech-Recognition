@@ -95,7 +95,7 @@ Conformer-main/
 
 ## Demo Video
 
-https://github.com/USERNAME/REPO/assets/demo.mp4
+[![Demo Thumbnail](assets/image.png)](assets/demo.mp4)
 
 ## Installation
 
