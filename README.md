@@ -95,37 +95,10 @@ Conformer-main/
 
 ## Demo Video
 
-> Replace `https://drive.google.com/file/d/18CtxePVpVg9nBuYzl06KDUTzWur25sYD/view?usp=sharing` with your Google Drive, YouTube, or GitHub hosted video link.
-
-### Option 1 — Best Method (Recommended)
-
-Upload the demo video directly into the GitHub repository inside a folder named `assets/`.
-
-Example:
-
-```bash
-assets/demo.mp4
-```
-
-Then use this inside the README:
-
-```html
-https://github.com/your-username/your-repo/assets/demo.mp4
-```
-
-GitHub automatically renders the video player directly inside the repository page.
-
-### Option 2 — YouTube Embed
-
-```markdown
-[![Watch the Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
-```
-
-### Option 3 — Google Drive Preview Embed
 
 ```html
 <iframe
-    src="https://drive.google.com/file/d/YOUR_FILE_ID/preview"
+    src="https://drive.google.com/file/d/18CtxePVpVg9nBuYzl06KDUTzWur25sYD/view?usp=sharing"
     width="100%"
     height="480"
     allow="autoplay">
@@ -283,8 +256,8 @@ You can include sample outputs and evaluation metrics here.
 
 | Metric | Score |
 |---|---|
-| CER | XX.XX% |
-| WER | XX.XX% |
+| CER | 9.99% |
+| WER | 26.56% |
 
 ---
 
@@ -311,27 +284,5 @@ You can include sample outputs and evaluation metrics here.
 
 ---
 
-## Acknowledgements
 
-This project is inspired by modern speech recognition research and the Conformer architecture for state-of-the-art ASR systems.
-
-Research Reference:
-
-> Conformer: Convolution-augmented Transformer for Speech Recognition
-
----
-
-## Author
-
-**Sudip Basnet**
-
-Bachelor in Computer Engineering
-
-Pulchowk Campus, IOE
-
----
-
-## License
-
-This project is licensed under the MIT License.
 
