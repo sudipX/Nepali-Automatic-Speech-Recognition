@@ -5,7 +5,6 @@
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-red.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-ff4b4b.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 A Deep Learning based Automatic Speech Recognition (ASR) system for Nepali language using the Conformer architecture and Connectionist Temporal Classification (CTC).
 
