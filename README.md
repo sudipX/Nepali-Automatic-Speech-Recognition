@@ -95,17 +95,7 @@ Conformer-main/
 
 ## Demo Video
 
-
-```html
-<iframe
-    src="https://drive.google.com/file/d/18CtxePVpVg9nBuYzl06KDUTzWur25sYD/view?usp=sharing"
-    width="100%"
-    height="480"
-    allow="autoplay">
-</iframe>
-```
-
----
+[![Watch the Demo](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://drive.google.com/file/d/18CtxePVpVg9nBuYzl06KDUTzWur25sYD/view?usp=sharing)
 
 ## Installation
 
