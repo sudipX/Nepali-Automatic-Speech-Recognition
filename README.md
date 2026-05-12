@@ -95,7 +95,10 @@ Conformer-main/
 
 ## Demo Video
 
-[![Demo Thumbnail](assets/image.png)](assets/demo.mp4)
+<h2>Demo Video</h2>
+<a href="assets/demo.mp4">
+  <img src="assets/image.png" width="800">
+</a>
 
 ## Installation
 
