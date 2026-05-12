@@ -95,7 +95,7 @@ Conformer-main/
 
 ## Demo Video
 
-[![Watch the Demo](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://drive.google.com/file/d/18CtxePVpVg9nBuYzl06KDUTzWur25sYD/view?usp=sharing)
+https://github.com/USERNAME/REPO/assets/demo.mp4
 
 ## Installation
 
