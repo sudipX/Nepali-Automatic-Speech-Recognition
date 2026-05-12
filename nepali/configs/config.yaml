@@ -1,0 +1,85 @@
+# Nepali Conformer ASR Configuration
+# Optimized for 50k Nepali Speech dataset
+
+# Model Architecture
+model:
+  encoder_dim: 256              # Hidden dimension (256 for medium model)
+  num_encoder_layers: 12        # Number of conformer blocks (12 for Nepali)
+  num_attention_heads: 4        # Attention heads
+  feed_forward_expansion_factor: 4
+  conv_expansion_factor: 2
+  conv_kernel_size: 31          # Slightly smaller for Nepali
+  dropout: 0.15                 # Higher dropout for regularization
+
+# Audio Processing
+audio:
+  sample_rate: 16000
+  n_mels: 80
+  n_fft: 512
+  hop_length: 160              # 10ms frame shift
+  win_length: 400              # 25ms window
+  fmin: 0
+  fmax: 8000                   # Nepali speech typically <8kHz
+
+# Data Augmentation (CRITICAL!)
+augmentation:
+  spec_augment:
+    enabled: true              # MUST BE TRUE!
+    freq_mask_param: 27
+    time_mask_param: 0.05
+    n_freq_masks: 2
+    n_time_masks: 10
+    p: 1.0                     # Apply to all training samples
+
+# Tokenizer (IMPORTANT FOR NEPALI!)
+tokenizer:
+  vocab_size: 3000             # 2000-5000 for Nepali
+  model_path: 'checkpoints/nepali_tokenizer.model'
+
+# Training Configuration
+training:
+  # Batch settings
+  batch_size: 32               # Adjust based on GPU memory
+  gradient_accumulation_steps: 2  # Effective batch = 64
+  num_epochs: 150              # More epochs for smaller dataset
+  
+  # Optimizer
+  betas: [0.9, 0.98]
+  eps: 1.0e-9
+  weight_decay: 1.0e-5         # Regularization
+  
+  # Learning rate (CRITICAL!)
+  scheduler: 'transformer'     # or 'warmup_cosine'
+  warmup_steps: 5000           # 5k-10k warmup steps
+  lr_scale: 1.0                # LR scaling factor
+  
+  # Regularization
+  max_grad_norm: 5.0           # Gradient clipping
+  label_smoothing: 0.1
+  
+  # Mixed precision
+  use_amp: true
+  
+  # Validation
+  val_every_n_epochs: 5        # Validate every 5 epochs
+  
+  # Early stopping
+  patience: 20                 # Stop if no improvement for 20 epochs
+
+# Checkpoint
+checkpoint:
+  save_dir: 'checkpoints'
+  save_every: 10               # Save checkpoint every 10 epochs
+  resume_from: null            # Path to resume from
+
+# System
+system:
+  device: 'cuda'               # 'cuda' or 'cpu'
+  num_workers: 4               # DataLoader workers
+  seed: 42
+
+# Data paths
+data:
+  train_manifest: 'data/train_manifest.json'
+  val_manifest: 'data/val_manifest.json'
+  test_manifest: 'data/test_manifest.json'
